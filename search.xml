@@ -19,17 +19,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>onedemo</title>
-    <url>/2024/12/15/onedemo/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>onedemo</category>
-      </categories>
-      <tags>
-        <tag>onedemo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Shell练习题</title>
     <url>/2024/12/15/Shell%E7%BB%83%E4%B9%A0%E9%A2%98/</url>
     <content><![CDATA[<h1 id="赛题"><a href="#赛题" class="headerlink" title="赛题"></a>赛题</h1><h4 id="（1）题目：检查当前系统中是否安装了某个特定的软件包。（根据系统实际情况进行解答）"><a href="#（1）题目：检查当前系统中是否安装了某个特定的软件包。（根据系统实际情况进行解答）" class="headerlink" title="（1）题目：检查当前系统中是否安装了某个特定的软件包。（根据系统实际情况进行解答）"></a>（1）题目：检查当前系统中是否安装了某个特定的软件包。（根据系统实际情况进行解答）</h4><p>注：获取用户输入进行软件包检查</p>
@@ -68,6 +57,17 @@
       </categories>
       <tags>
         <tag>shell 编程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>onedemo</title>
+    <url>/2024/12/15/onedemo/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>onedemo</category>
+      </categories>
+      <tags>
+        <tag>onedemo</tag>
       </tags>
   </entry>
 </search>
