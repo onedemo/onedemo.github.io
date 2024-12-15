@@ -21,11 +21,13 @@
   
     <meta name="description" content="一个学习网络的菜鸟">
 <meta property="og:type" content="website">
-<meta property="og:title" content="页面不存在">
-<meta property="og:url" content="http://onedemo.github.io/404.html">
+<meta property="og:title" content="关于">
+<meta property="og:url" content="http://onedemo.github.io/about/index.html">
 <meta property="og:site_name" content="小志的博客">
 <meta property="og:description" content="一个学习网络的菜鸟">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-12-15T10:49:48.350Z">
+<meta property="article:modified_time" content="2024-12-15T10:49:48.350Z">
 <meta property="article:author" content="小志">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -33,11 +35,17 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>页面不存在 - 小志的博客</title>
+  <title>关于 - 小志的博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
 
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
 
@@ -87,7 +95,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 85vh;">
+<div class="header-inner" style="height: 60vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -205,7 +213,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="页面不存在"></span>
+            <span id="subtitle" data-typed-text="关于"></span>
           
         </div>
 
@@ -223,18 +231,92 @@
 
   <main>
     
+      <div class="container nopadding-x-md">
+        <div id="board"
+          >
+          
+            <div class="about-avatar">
+              <img src="/img/avatar.png" srcset="/img/loading.gif" lazyload class="img-fluid" alt="avatar">
+            </div>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+<div class="text-center">
+  <div class="about-info">
+    <div class="about-name">小志</div>
+    <div class="about-intro">一个正在学习网络的小菜鸡 请多多指教</div>
+    <div class="about-icons">
       
+        
+        
+        
+        <a href=https://github.com/onedemo class="
+           hint--bottom hint--rounded"
+           aria-label="GitHub"
+           target="_blank"
+        >
+          <i class="iconfont icon-github-fill" aria-hidden="true"></i>
+          
+        </a>
+      
+        
+        
+        
+        <a href=https://space.bilibili.com/2050160855 class="
+           hint--bottom hint--rounded"
+           aria-label="哔哩哔哩"
+           target="_blank"
+        >
+          <i class="iconfont icon-bilibili-fill" aria-hidden="true"></i>
+          
+        </a>
+      
+    </div>
+  </div>
+</div>
 
-<script>
-  function redirect() {
-    location.href = "/";
-  }
+<article class="about-content page-content mt-5">
+  <div class="markdown-body">
+    
+  </div>
 
   
-    setTimeout(redirect, 5000)
-  
-</script>
+</article>
 
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     
 
     
@@ -353,6 +435,59 @@
 
 
 
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
 
   <script  src="/js/local-search.js" ></script>
 
