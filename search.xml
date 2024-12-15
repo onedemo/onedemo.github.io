@@ -1,6 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Shell练习题</title>
+    <url>/2024/12/15/Shell%E7%BB%83%E4%B9%A0%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="赛题"><a href="#赛题" class="headerlink" title="赛题"></a>赛题</h1><p>（1）题目：检查当前系统中是否安装了某个特定的软件包。（根据系统实际情况进行解答）</p>
+<p>注：获取用户输入进行软件包检查</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#! /bin/bash</span><br><br><span class="hljs-built_in">read</span> -p <span class="hljs-string">&quot;包名：&quot;</span> <span class="hljs-variable">$str</span><br>rpm -q <span class="hljs-variable">$str</span> &amp;&gt; /dev/null<br></code></pre></td></tr></table></figure>
+
+<p>（2）题目：扫描指定目录下的所有文件，并列出其中所有符号链接的文件。</p>
+<p>注：目录自定义，脚本正确即可</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#! /bin/bash</span><br><br><span class="hljs-built_in">read</span> -p <span class="hljs-string">&quot;请输入路径：&quot;</span> path<br>find <span class="hljs-variable">$path</span> -<span class="hljs-built_in">type</span> l<br></code></pre></td></tr></table></figure>
+
+<p>（3）题目：监控一个日志文件，并实时显示文件中新增的内容</p>
+<p>注：日志文件在&#x2F;var&#x2F;log&#x2F;messages</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs bsh">#! /bin/bash<br><br>tail -f /var/log/messages<br></code></pre></td></tr></table></figure>
+
+<p>（4）题目：统计一个文本文件中每个单词出现的次数，并按出现次数排序输出。</p>
+<p>注：文件自定义,脚本正确即可</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#! /bin/bash</span><br><br><span class="hljs-built_in">read</span> -p <span class="hljs-string">&quot;请输入文件：&quot;</span> file<br><span class="hljs-built_in">tr</span> -sc <span class="hljs-string">&#x27;A-Za-z&#x27;</span> <span class="hljs-string">&#x27;\n&#x27;</span> &lt; <span class="hljs-variable">$file</span> | <span class="hljs-built_in">tr</span> <span class="hljs-string">&#x27;A-Z&#x27;</span> <span class="hljs-string">&#x27;a-z&#x27;</span> | sed  <span class="hljs-string">&#x27;/^$/d&#x27;</span> | <span class="hljs-built_in">sort</span> | <span class="hljs-built_in">uniq</span> -c | <span class="hljs-built_in">sort</span> -nr<br></code></pre></td></tr></table></figure>
+
+<p>（5）题目：批量修改一组文件的文件名，将它们的扩展名从.txt改为.dat。</p>
+<p>注：目录自定义</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#! /bin/bash</span><br><br><span class="hljs-built_in">read</span> -p <span class="hljs-string">&quot;请输入目录：&quot;</span> path<br><span class="hljs-built_in">cd</span> <span class="hljs-variable">$path</span><br><span class="hljs-keyword">for</span> file <span class="hljs-keyword">in</span> $(<span class="hljs-built_in">ls</span> *.txt);<br><span class="hljs-keyword">do</span><br>        <span class="hljs-comment">#mv &quot;$file&quot; &quot;$&#123;file%.txt&#125;.dat&quot;</span><br>        name=$(<span class="hljs-built_in">echo</span> <span class="hljs-variable">$file</span> | awk -F <span class="hljs-string">&quot;.&quot;</span> <span class="hljs-string">&#x27;&#123;print $1&#125;&#x27;</span>)<br>        <span class="hljs-built_in">mv</span> <span class="hljs-variable">$file</span> <span class="hljs-variable">$name</span>.dat<br>        <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$file</span> --&gt; <span class="hljs-variable">$&#123;file%.txt&#125;</span>.dat&quot;</span><br><span class="hljs-keyword">done</span><br></code></pre></td></tr></table></figure>
+
+<p>（6）题目：编写一个Shell脚本，从一个Web服务器上下载文件，并检查下载文件的完整性（例如，使用MD5或SHA256校验）。</p>
+<p>注：自定义url链接</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#! /bin/bash</span><br><br>md5_yuan=<span class="hljs-string">&quot;fc5dc492fc2655b38cc7183587307056&quot;</span><br>url=<span class="hljs-string">&quot;http://192.168.1.35/demo.txt&quot;</span><br>filename=$(<span class="hljs-built_in">basename</span> <span class="hljs-string">&quot;<span class="hljs-variable">$url</span>&quot;</span>)<br><br>wget -O <span class="hljs-string">&quot;<span class="hljs-variable">$filename</span>&quot;</span> <span class="hljs-string">&quot;<span class="hljs-variable">$url</span>&quot;</span><br>md5_dow=$(<span class="hljs-built_in">md5sum</span> <span class="hljs-string">&quot;<span class="hljs-variable">$filename</span>&quot;</span> | awk <span class="hljs-string">&#x27;&#123;print $1&#125;&#x27;</span>)<br><br><span class="hljs-keyword">if</span> [[ <span class="hljs-string">&quot;<span class="hljs-variable">$de5_yuam</span>&quot;</span> -eq <span class="hljs-string">&quot;<span class="hljs-variable">$md5_dow</span>&quot;</span> ]];<span class="hljs-keyword">then</span><br>        <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;文件下载完整&quot;</span><br><span class="hljs-keyword">else</span><br>        <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;文件下载不完整&quot;</span><br><span class="hljs-keyword">fi</span><br></code></pre></td></tr></table></figure>
+
+<p>（7）题目：编写一个Shell脚本，定期清理系统中某个目录下超过一定天数的临时文件。</p>
+<p>注：下载目录自定义</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#! /bin/bash</span><br><br><span class="hljs-comment"># 定义7天</span><br>day=7<br>find . -<span class="hljs-built_in">type</span> f -mtime +<span class="hljs-string">&quot;<span class="hljs-variable">$day</span>&quot;</span> -delete<br></code></pre></td></tr></table></figure>
+
+<p>（8）题目：编写一个Shell脚本，从一个文本文件中提取所有的URL链接，并验证链接的有效性。</p>
+<p>注：url自定义，脚本正确即可</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#! /bin/bash</span><br><br>URL_Done_List=()<br><br><span class="hljs-keyword">while</span> <span class="hljs-built_in">read</span> url;<br><span class="hljs-keyword">do</span><br>        curl -s --<span class="hljs-built_in">head</span> <span class="hljs-variable">$url</span> &gt; /dev/null<br>        <span class="hljs-keyword">if</span> [[ $? -eq 0 ]];<span class="hljs-keyword">then</span><br>                <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;链接 <span class="hljs-variable">$url</span> 有效&quot;</span><br>        <span class="hljs-keyword">else</span><br>                URL_Done_List+=(<span class="hljs-string">&quot;<span class="hljs-variable">$url</span>&quot;</span>)<br>        <span class="hljs-keyword">fi</span><br><span class="hljs-keyword">done</span> &lt; url.txt<br><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;不可用链接：&quot;</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-variable">$&#123;URL_Done_List[@]&#125;</span>;<br><span class="hljs-keyword">do</span><br>        <span class="hljs-built_in">echo</span> <span class="hljs-variable">$i</span><br><span class="hljs-keyword">done</span><br><span class="hljs-comment"># echo &quot;$&#123;URL_Done_List[@]&#125;&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>（9）题目：编写一个Shell脚本，实现一个简单的数据库备份系统，定期备份指定的数据库到文件。</p>
+<p>注：mysql数据库的备份</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#! /bin/bash</span><br><br><span class="hljs-built_in">date</span>=$(<span class="hljs-built_in">date</span> +%Y%m%d-%H:%M.%S)<br><span class="hljs-built_in">echo</span> <span class="hljs-variable">$date</span><br>mysqldump -uroot -padmin@123. <span class="hljs-built_in">test</span> &gt; mysqlbackup-<span class="hljs-variable">$date</span><br></code></pre></td></tr></table></figure>
+
+<p>（10）题目：编写一个Shell脚本，定期检查系统中所有用户的密码有效期，并提醒用户在密码过期前修改密码。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#! /bin/bash</span><br><span class="hljs-keyword">while</span> <span class="hljs-built_in">read</span> user;<br><span class="hljs-keyword">do</span><br>        expire=$(chage -l <span class="hljs-variable">$user</span> | grep <span class="hljs-string">&quot;密码过期时间&quot;</span> | awk -F <span class="hljs-string">&quot;：&quot;</span> <span class="hljs-string">&#x27;&#123;print $2&#125;&#x27;</span>)<br>        expiretime=$(<span class="hljs-built_in">date</span> -d <span class="hljs-variable">$expire</span> +%s)<br>        time=$(<span class="hljs-built_in">date</span> +%s)<br>        day=$((expiretime - time / (<span class="hljs-number">60</span>*<span class="hljs-number">60</span>*<span class="hljs-number">24</span>)))<br>        <span class="hljs-keyword">if</span> [[ <span class="hljs-variable">$day</span> -le 7 ]];<span class="hljs-keyword">then</span><br>                <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;该改密码了&quot;</span><br>        <span class="hljs-keyword">fi</span><br><span class="hljs-keyword">done</span> &lt; &lt;(<span class="hljs-built_in">cut</span> -d: -f1 /etc/passwd)<br></code></pre></td></tr></table></figure>
+
+<p>‍</p>
+]]></content>
+      <categories>
+        <category>shell 编程</category>
+      </categories>
+      <tags>
+        <tag>shell 编程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>onedemo</title>
+    <url>/2024/12/15/onedemo/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>onedemo</category>
+      </categories>
+      <tags>
+        <tag>onedemo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2024/12/14/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -17,16 +79,5 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>onedemo</title>
-    <url>/2024/12/15/onedemo/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>onedemo</category>
-      </categories>
-      <tags>
-        <tag>onedemo</tag>
-      </tags>
   </entry>
 </search>
