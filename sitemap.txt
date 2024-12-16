@@ -3,4 +3,5 @@ http://onedemo.github.io/about/index.html
 http://onedemo.github.io/2024/12/14/hello-world/
 http://onedemo.github.io/
 http://onedemo.github.io/tags/shell/
+http://onedemo.github.io/tags/%E7%BC%96%E7%A8%8B/
 http://onedemo.github.io/categories/shell/
