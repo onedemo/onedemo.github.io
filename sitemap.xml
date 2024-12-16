@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://onedemo.github.io/about/index.html</loc>
+    <loc>http://onedemo.github.io/2024/12/15/Shell-demo/</loc>
     
     <lastmod>2024-12-16</lastmod>
     
@@ -11,9 +11,9 @@
   </url>
   
   <url>
-    <loc>http://onedemo.github.io/2024/12/15/Shell%E7%BB%83%E4%B9%A0%E9%A2%98/</loc>
+    <loc>http://onedemo.github.io/about/index.html</loc>
     
-    <lastmod>2024-12-15</lastmod>
+    <lastmod>2024-12-16</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -38,7 +38,7 @@
 
   
   <url>
-    <loc>http://onedemo.github.io/tags/shell-%E7%BC%96%E7%A8%8B/</loc>
+    <loc>http://onedemo.github.io/tags/shell/</loc>
     <lastmod>2024-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -47,7 +47,7 @@
 
   
   <url>
-    <loc>http://onedemo.github.io/categories/shell-%E7%BC%96%E7%A8%8B/</loc>
+    <loc>http://onedemo.github.io/categories/shell/</loc>
     <lastmod>2024-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
