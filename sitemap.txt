@@ -1,7 +1,7 @@
-http://onedemo.github.io/2024/12/15/Shell-demo/
-http://onedemo.github.io/about/index.html
-http://onedemo.github.io/2024/12/14/hello-world/
-http://onedemo.github.io/
-http://onedemo.github.io/tags/shell/
-http://onedemo.github.io/tags/%E7%BC%96%E7%A8%8B/
-http://onedemo.github.io/categories/shell/
+http://www.xiao-zhi.xin/2024/12/15/Shell-demo/
+http://www.xiao-zhi.xin/about/index.html
+http://www.xiao-zhi.xin/2024/12/14/hello-world/
+http://www.xiao-zhi.xin/
+http://www.xiao-zhi.xin/tags/shell/
+http://www.xiao-zhi.xin/tags/%E7%BC%96%E7%A8%8B/
+http://www.xiao-zhi.xin/categories/shell/

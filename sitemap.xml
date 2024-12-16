@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://onedemo.github.io/2024/12/15/Shell-demo/</loc>
+    <loc>http://www.xiao-zhi.xin/2024/12/15/Shell-demo/</loc>
     
     <lastmod>2024-12-16</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>http://onedemo.github.io/about/index.html</loc>
+    <loc>http://www.xiao-zhi.xin/about/index.html</loc>
     
     <lastmod>2024-12-16</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>http://onedemo.github.io/2024/12/14/hello-world/</loc>
+    <loc>http://www.xiao-zhi.xin/2024/12/14/hello-world/</loc>
     
     <lastmod>2024-12-14</lastmod>
     
@@ -30,7 +30,7 @@
   
 
   <url>
-    <loc>http://onedemo.github.io/</loc>
+    <loc>http://www.xiao-zhi.xin/</loc>
     <lastmod>2024-12-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -38,14 +38,14 @@
 
   
   <url>
-    <loc>http://onedemo.github.io/tags/shell/</loc>
+    <loc>http://www.xiao-zhi.xin/tags/shell/</loc>
     <lastmod>2024-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://onedemo.github.io/tags/%E7%BC%96%E7%A8%8B/</loc>
+    <loc>http://www.xiao-zhi.xin/tags/%E7%BC%96%E7%A8%8B/</loc>
     <lastmod>2024-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -54,7 +54,7 @@
 
   
   <url>
-    <loc>http://onedemo.github.io/categories/shell/</loc>
+    <loc>http://www.xiao-zhi.xin/categories/shell/</loc>
     <lastmod>2024-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
