@@ -20,15 +20,6 @@
   </url>
   
   <url>
-    <loc>http://onedemo.github.io/2024/12/15/onedemo/</loc>
-    
-    <lastmod>2024-12-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://onedemo.github.io/2024/12/14/hello-world/</loc>
     
     <lastmod>2024-12-14</lastmod>
@@ -53,24 +44,10 @@
     <priority>0.2</priority>
   </url>
   
-  <url>
-    <loc>http://onedemo.github.io/tags/onedemo/</loc>
-    <lastmod>2024-12-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
 
   
   <url>
     <loc>http://onedemo.github.io/categories/shell-%E7%BC%96%E7%A8%8B/</loc>
-    <lastmod>2024-12-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://onedemo.github.io/categories/onedemo/</loc>
     <lastmod>2024-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
